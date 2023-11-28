@@ -1,1 +1,1 @@
-# it_girls
+# it.girls
