@@ -3,6 +3,7 @@ package com.example.platidatisedobrimvrati;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.platidatisedobrimvrati.model.PlacanjeActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +16,6 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import com.example.platidatisedobrimvrati.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        Button btn1 = (Button) findViewById(R.id.button4);
+        Button dugmeProba = (Button) findViewById(R.id.dugmeProba);
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        dugmeProba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(MainActivity.this, ProbaActivity.class);
@@ -41,6 +41,17 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.this.startActivity(myIntent);
             }
         });
+        Button dugmeOrg1 = (Button) findViewById(R.id.dugmeOrg1);
+
+        dugmeOrg1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent myIntent = new Intent(MainActivity.this, PlacanjeActivity.class);
+                //myIntent.putExtra("key", value); //Optional parameters
+                MainActivity.this.startActivity(myIntent);
+            }
+        });
+
     }
 
 }
