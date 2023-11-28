@@ -4,6 +4,8 @@ public class Organizacija {
     private String ime;
     private String imeSajta;
 
+    private String poruka;
+
     public Organizacija(String ime) {
         this.ime = ime;
     }
