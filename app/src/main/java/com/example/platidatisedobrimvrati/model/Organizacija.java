@@ -1,12 +1,12 @@
 package com.example.platidatisedobrimvrati.model;
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 @Entity(tableName = "tabela_organizacija")
 public class Organizacija {
     @PrimaryKey
-    @ColumnInfo(name = "id")
-    private int id;
+    @NonNull
     @ColumnInfo(name = "ime")
     private String ime;
     @ColumnInfo(name = "ime_sajta")
@@ -16,11 +16,8 @@ public class Organizacija {
     @ColumnInfo(name = "broj_racuna")
     private long brojRacuna;
 
-    public Organizacija(int id) {
-        this.id = id;
-    }
-    public int getId() {
-        return id;
+    public Organizacija(String ime) {
+        this.ime = ime;
     }
     public String getIme() {
         return ime;
@@ -33,10 +30,6 @@ public class Organizacija {
     }
     public long getBrojRacuna() {
         return brojRacuna;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public void setIme(String ime) {
@@ -61,8 +54,8 @@ public class Organizacija {
                 "ime='" + ime +
                 '}';
     }
-
-    //napravi metod getOrganizacijaPoIdu
+    public Organizacija getOrganizacijaPoImenu
+    //napravi metod getOrganizacijaPoImenu
 }
 
 

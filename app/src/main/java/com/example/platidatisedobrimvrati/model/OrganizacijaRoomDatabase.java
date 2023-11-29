@@ -47,12 +47,12 @@ public abstract class OrganizacijaRoomDatabase extends RoomDatabase {
                 // Populate the database in the background.
                 // If you want to start with more words, just add them.
                 OrganizacijaDao dao = INSTANCE.organizacijaDao();
-                dao.deleteAll();
+                //dao.deleteAll();
 
-                Organizacija organizacija = new Organizacija(12);
+                Organizacija organizacija = new Organizacija("Tina");
                 dao.insert(organizacija);
-                organizacija = new Organizacija(13);
-                dao.insert(organizacija);
+                Organizacija organizacija2 = new Organizacija("Tanja");
+                dao.insert(organizacija2);
             });
         }
     };
