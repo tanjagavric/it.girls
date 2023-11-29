@@ -13,14 +13,20 @@ public class Organizacija {
     private String imeSajta;
     @ColumnInfo(name = "poruka")
     private String poruka;
-    @ColumnInfo(name = "broj_racuna")
-    private long brojRacuna;
-
     @ColumnInfo(name = "link_do_slike")
     private String linkDoSlike;
+    @ColumnInfo(name = "maksimalna_donacija")
+    private double maksimalnaDonacija;
+    @ColumnInfo(name = "ukupna_donacija")
+    private double ukupnaDonacija;
+
+
+
 
     public Organizacija(String ime) {
         this.ime = ime;
+        this.maksimalnaDonacija=0;
+        this.ukupnaDonacija=0;
     }
     public String getIme() {
         return ime;
@@ -31,10 +37,14 @@ public class Organizacija {
     public String getPoruka() {
         return poruka;
     }
-    public long getBrojRacuna() {
-        return brojRacuna;
-    }
     public String getLinkDoSlike() { return linkDoSlike; }
+    public double getMaksimalnaDonacija() {
+        return maksimalnaDonacija;
+    }
+
+    public double getUkupnaDonacija() {
+        return ukupnaDonacija;
+    }
 
     public void setIme(String ime) {
         this.ime = ime;
@@ -48,18 +58,29 @@ public class Organizacija {
         this.poruka = poruka;
     }
 
-    public void setBrojRacuna(long brojRacuna) {
-        this.brojRacuna = brojRacuna;
-    }
     public void setLinkDoSlike(String link) { this.linkDoSlike = link; }
+    public void setMaksimalnaDonacija(double maksimalnaDonacija) {
+        this.maksimalnaDonacija = maksimalnaDonacija;
+    }
+    public void setUkupnaDonacija(double ukupnaDonacija) {
+        this.ukupnaDonacija = ukupnaDonacija;
+    }
+    public void dodajDonaciju(double iznos) {
+        this.ukupnaDonacija+=iznos;
+    }
 
     @Override
     public String toString() {
-        return "Organizacija{" +
-                "ime='" + ime +
-                '}';
+        return  "ime='" + ime + '\'' +
+                ", \nimeSajta='" + imeSajta + '\'' +
+                ", \nporuka='" + poruka + '\'' +
+                ", \nlinkDoSlike='" + linkDoSlike + '\'' +
+                ", \nmaksimalnaDonacija=" + maksimalnaDonacija +
+                ", \nukupnaDonacija=" + ukupnaDonacija;
     }
-    //public Organizacija getOrganizacijaPoImenu
+
+
+//public Organizacija getOrganizacijaPoImenu
     //napravi metod getOrganizacijaPoImenu
     // napravila get set i atribut linkdoslike
 }

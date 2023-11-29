@@ -53,12 +53,11 @@ public class ProbaActivity extends AppCompatActivity {
 
         OrganizacijaRoomDatabase db = Room.databaseBuilder(getApplicationContext(), OrganizacijaRoomDatabase.class, "organizacija_database").allowMainThreadQueries().build();
         OrganizacijaDao dao = db.organizacijaDao();
-        Organizacija irina = new Organizacija("Irina");
-        dao.insert(irina);
-        Organizacija o = dao.getOrganizacijaPoImenu("Tanja");
+        Organizacija o = dao.getOrganizacijaPoImenu("Zvecanska");
 
-        EditText editText = (EditText)findViewById(R.id.editTextText);
-        editText.setText(o.toString(), TextView.BufferType.EDITABLE);
+
+        TextView tekst = findViewById(R.id.textView2);
+        tekst.setText(o.toString(), TextView.BufferType.EDITABLE);
 
     }
 }

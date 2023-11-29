@@ -28,7 +28,6 @@ public abstract class OrganizacijaRoomDatabase extends RoomDatabase {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
                                     OrganizacijaRoomDatabase.class, "organizacija_database")
-                            .addCallback(sRoomDatabaseCallback)
                             .build();
                 }
             }
@@ -36,24 +35,4 @@ public abstract class OrganizacijaRoomDatabase extends RoomDatabase {
         return INSTANCE;
     }
 
-    private static RoomDatabase.Callback sRoomDatabaseCallback = new RoomDatabase.Callback() {
-        @Override
-        public void onCreate(@NonNull SupportSQLiteDatabase db) {
-            super.onCreate(db);
-
-            // If you want to keep data through app restarts,
-            // comment out the following block
-            databaseWriteExecutor.execute(() -> {
-                // Populate the database in the background.
-                // If you want to start with more words, just add them.
-                OrganizacijaDao dao = INSTANCE.organizacijaDao();
-                //dao.deleteAll();
-
-                Organizacija organizacija = new Organizacija("Tina");
-                dao.insert(organizacija);
-                Organizacija organizacija2 = new Organizacija("Tanja");
-                dao.insert(organizacija2);
-            });
-        }
-    };
 }
