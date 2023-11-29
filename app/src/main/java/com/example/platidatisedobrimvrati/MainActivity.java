@@ -3,6 +3,10 @@ package com.example.platidatisedobrimvrati;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.platidatisedobrimvrati.model.Organizacija;
+import com.example.platidatisedobrimvrati.model.OrganizacijaDao;
+import com.example.platidatisedobrimvrati.model.OrganizacijaRoomDatabase;
+import com.example.platidatisedobrimvrati.model.OrganizacijaViewModel;
 import com.example.platidatisedobrimvrati.model.PlacanjeActivity;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -12,10 +16,13 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.core.view.WindowCompat;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.room.Room;
 
 
 import android.view.Menu;
@@ -26,12 +33,18 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ViewModelProvider viewModelProvider = new ViewModelProvider(this);
+        OrganizacijaViewModel mOrganizacijaViewModel = (OrganizacijaViewModel) viewModelProvider.get(OrganizacijaViewModel.class);
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
