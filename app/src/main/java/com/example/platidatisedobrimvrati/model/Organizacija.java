@@ -16,6 +16,9 @@ public class Organizacija {
     @ColumnInfo(name = "broj_racuna")
     private long brojRacuna;
 
+    @ColumnInfo(name = "link_do_slike")
+    private String linkDoSlike;
+
     public Organizacija(String ime) {
         this.ime = ime;
     }
@@ -31,6 +34,7 @@ public class Organizacija {
     public long getBrojRacuna() {
         return brojRacuna;
     }
+    public String getLinkDoSlike() { return linkDoSlike; }
 
     public void setIme(String ime) {
         this.ime = ime;
@@ -47,6 +51,7 @@ public class Organizacija {
     public void setBrojRacuna(long brojRacuna) {
         this.brojRacuna = brojRacuna;
     }
+    public void setLinkDoSlike(String link) { this.linkDoSlike = link; }
 
     @Override
     public String toString() {
@@ -56,6 +61,7 @@ public class Organizacija {
     }
     //public Organizacija getOrganizacijaPoImenu
     //napravi metod getOrganizacijaPoImenu
+    // napravila get set i atribut linkdoslike
 }
 
 
