@@ -13,6 +13,9 @@
         android:theme="@style/Theme.PlatiDaTiSeDobrimVrati"
         tools:targetApi="31">
         <activity
+            android:name=".ProbaActivity2"
+            android:exported="false" />
+        <activity
             android:name=".model.PlacanjeActivity"
             android:exported="false" />
         <activity
