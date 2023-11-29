@@ -25,8 +25,8 @@
 
         <Button
             android:id="@+id/dugmeBlank1"
-            android:layout_width="407dp"
-            android:layout_height="473dp"
+            android:layout_width="match_parent"
+            android:layout_height="399dp"
             android:backgroundTint="@color/colorBase"
             android:text="100"
             android:textColor="@color/colorBase"
@@ -44,26 +44,27 @@
             android:text="Proba"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.889"
+            app:layout_constraintHorizontal_bias="0.925"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.046" />
+            app:layout_constraintVertical_bias="0.102" />
 
         <Button
             android:id="@+id/dugmeOrg1"
             android:layout_width="350dp"
             android:layout_height="70dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="@color/colorButton"
             android:text="Org1"
             android:textColor="@color/colorText"
             android:textSize="30dp"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dugmeOrg2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintHorizontal_bias="0.508"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.372"
+            app:layout_constraintVertical_bias="1.0"
             app:strokeColor="@color/colorText"
             app:strokeWidth="2dp" />
 
@@ -78,10 +79,8 @@
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.929"
+            app:layout_constraintTop_toBottomOf="@+id/dugmeBlank1"
             app:strokeColor="@color/colorText"
             app:strokeWidth="2dp" />
 
@@ -89,6 +88,7 @@
             android:id="@+id/dugmeOrg3"
             android:layout_width="350dp"
             android:layout_height="70dp"
+            android:layout_marginTop="8dp"
             android:backgroundTint="@color/colorButton"
             android:text="Org3"
             android:textColor="@color/colorText"
@@ -96,11 +96,29 @@
             app:cornerRadius="20dp"
             app:layout_anchor="@+id/constraintLayout"
             app:layout_anchorGravity="center"
-            app:layout_constraintBottom_toTopOf="@+id/spinner"
+            app:layout_constraintBottom_toBottomOf="@+id/dugmeBlank1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintTop_toBottomOf="@+id/dugmeOrg2"
+            app:layout_constraintVertical_bias="0.0"
+            app:strokeColor="@color/colorText"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/dugmeOrg2"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/colorButton"
+            android:text="Org2"
+            android:textColor="@color/colorText"
+            android:textSize="30dp"
+            app:cornerRadius="20dp"
+            app:layout_anchor="@+id/constraintLayout"
+            app:layout_anchorGravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/dugmeBlank1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dugmeBlank1"
             app:strokeColor="@color/colorText"
             app:strokeWidth="2dp" />
 
@@ -108,45 +126,35 @@
             android:id="@+id/spinner"
             android:layout_width="360dp"
             android:layout_height="60dp"
+            android:layout_marginTop="8dp"
             android:spinnerMode="dropdown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.588"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.721" />
+            app:layout_constraintTop_toBottomOf="@id/dugmeOrg3"
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <TextView
             android:id="@+id/tekstIzaberiIznos2"
             android:layout_width="wrap_content"
             android:layout_height="62dp"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="32dp"
             android:fontFamily="sans-serif"
             android:text="Da li želite da donirate?"
             android:textColor="@color/colorText"
             android:textSize="32dp"
             android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/dugmeOrg1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/dugmeBlank1"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
-        android:id="@+id/dugmeOrg2"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:backgroundTint="@color/colorButton"
-        android:text="Org2"
-        android:textColor="@color/colorText"
-        android:textSize="30dp"
-        app:cornerRadius="20dp"
-        app:layout_anchor="@+id/constraintLayout"
-        app:layout_anchorGravity="center"
-        app:strokeColor="@color/colorText"
-        app:strokeWidth="2dp" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
