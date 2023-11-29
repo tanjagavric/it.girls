@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBase"
-    tools:context=".model.PlacanjeActivity">
+    tools:context=".PlacanjeActivity">
 
 
     <Button
@@ -140,14 +140,14 @@
         android:id="@+id/tvZahvalnica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Organizacija ... Vam se zahvaljuje!"
+        android:text="Donirate za organizaciju ..."
         android:textColor="@color/colorBase"
         android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/tekstIzaberiIznos"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="@+id/button"
+        app:layout_constraintVertical_bias="0.36" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

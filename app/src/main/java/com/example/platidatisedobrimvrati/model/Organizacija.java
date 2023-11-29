@@ -54,7 +54,7 @@ public class Organizacija {
                 "ime='" + ime +
                 '}';
     }
-    public Organizacija getOrganizacijaPoImenu
+    //public Organizacija getOrganizacijaPoImenu
     //napravi metod getOrganizacijaPoImenu
 }
 

@@ -16,7 +16,7 @@
             android:name=".ProbaActivity2"
             android:exported="false" />
         <activity
-            android:name=".model.PlacanjeActivity"
+            android:name=".PlacanjeActivity"
             android:exported="false" />
         <activity
             android:name=".ProbaActivity"

@@ -1,4 +1,4 @@
-package com.example.platidatisedobrimvrati.model;
+package com.example.platidatisedobrimvrati;
 
 import androidx.appcompat.app.AppCompatActivity;
 
