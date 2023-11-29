@@ -22,4 +22,8 @@ public class OrganizacijaViewModel extends AndroidViewModel {
     public LiveData<List<Organizacija>> getListaOrganizacija() { return mListaOrganizacija; }
 
     public void insert(Organizacija organizacija) { mRepository.insert(organizacija); }
+
+    public Organizacija getOrganizacijaPoImenu(String ime) {
+        return mRepository.getOrganizacijaPoImenu(ime);
+    }
 }

@@ -18,4 +18,7 @@ public interface OrganizacijaDao {
 
     @Query("SELECT * FROM tabela_organizacija")
     LiveData<List<Organizacija>> getListaOrganizacija();
+
+    @Query("SELECT * FROM tabela_organizacija WHERE ime = :imeOrg")
+    Organizacija getOrganizacijaPoImenu(String imeOrg);
 }

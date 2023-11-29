@@ -1,7 +1,6 @@
 package com.example.platidatisedobrimvrati;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,7 +17,6 @@ import com.example.platidatisedobrimvrati.model.OrganizacijaRoomDatabase;
 import com.example.platidatisedobrimvrati.model.OrganizacijaViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.List;
 
 public class ProbaActivity extends AppCompatActivity {
     public static final int NEW_WORD_ACTIVITY_REQUEST_CODE = 1;
@@ -53,15 +51,14 @@ public class ProbaActivity extends AppCompatActivity {
         });
 
 
-        OrganizacijaRoomDatabase db = Room.databaseBuilder(getApplicationContext(),
-                OrganizacijaRoomDatabase.class, "baza-organizacija").build();
-        OrganizacijaDao organizacijaDao = db.organizacijaDao();
-        LiveData<List<Organizacija>> organizacije = organizacijaDao.getListaOrganizacija();
-        //Organizacija o1 = new Organizacija("Tina");
-
+        OrganizacijaRoomDatabase db = Room.databaseBuilder(getApplicationContext(), OrganizacijaRoomDatabase.class, "organizacija_database").allowMainThreadQueries().build();
+        OrganizacijaDao dao = db.organizacijaDao();
+        Organizacija irina = new Organizacija("Irina");
+        dao.insert(irina);
+        Organizacija o = dao.getOrganizacijaPoImenu("Tanja");
 
         EditText editText = (EditText)findViewById(R.id.editTextText);
-        editText.setText(organizacije.toString(), TextView.BufferType.EDITABLE);
+        editText.setText(o.toString(), TextView.BufferType.EDITABLE);
 
     }
 }

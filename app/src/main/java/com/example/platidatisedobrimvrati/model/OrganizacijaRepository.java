@@ -34,4 +34,8 @@ class OrganizacijaRepository {
             mOrganizacijaDao.insert(organizacija);
         });
     }
+
+    Organizacija getOrganizacijaPoImenu(String ime) {
+        return mOrganizacijaDao.getOrganizacijaPoImenu(ime);
+    }
 }
