@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorText"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
@@ -23,76 +24,130 @@
         app:layout_anchorGravity="center">
 
         <Button
+            android:id="@+id/dugmeBlank1"
+            android:layout_width="407dp"
+            android:layout_height="473dp"
+            android:backgroundTint="@color/colorBase"
+            android:text="100"
+            android:textColor="@color/colorBase"
+            app:cornerRadius="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/colorBase" />
+
+        <Button
             android:id="@+id/dugmeProba"
             android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:text="Proba"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.455"
+            app:layout_constraintHorizontal_bias="0.889"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.127" />
+            app:layout_constraintVertical_bias="0.046" />
 
         <Button
             android:id="@+id/dugmeOrg1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/colorButton"
             android:text="Org1"
+            android:textColor="@color/colorText"
+            android:textSize="30dp"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.396"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.288" />
-
-        <Button
-            android:id="@+id/dugmeOrg2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Org2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.798"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.31" />
-
-        <Button
-            android:id="@+id/dugmeOrg3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Org3"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.356"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.402" />
+            app:layout_constraintVertical_bias="0.372"
+            app:strokeColor="@color/colorText"
+            app:strokeWidth="2dp" />
 
         <Button
             android:id="@+id/dugmeNe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorButton"
             android:text="Ne"
+            android:textColor="@color/colorText"
+            android:textSize="30dp"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.628"
+            app:layout_constraintHorizontal_bias="0.526"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.894" />
+            app:layout_constraintVertical_bias="0.929"
+            app:strokeColor="@color/colorText"
+            app:strokeWidth="2dp" />
+
+        <Button
+            android:id="@+id/dugmeOrg3"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:backgroundTint="@color/colorButton"
+            android:text="Org3"
+            android:textColor="@color/colorText"
+            android:textSize="30dp"
+            app:cornerRadius="20dp"
+            app:layout_anchor="@+id/constraintLayout"
+            app:layout_anchorGravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dugmeOrg2"
+            app:layout_constraintVertical_bias="0.627"
+            app:strokeColor="@color/colorText"
+            app:strokeWidth="2dp" />
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="400dp"
-            android:layout_height="15dp"
+            android:layout_width="360dp"
+            android:layout_height="60dp"
             android:spinnerMode="dropdown"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.588"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.721" />
+
+
+        <TextView
+            android:id="@+id/tekstIzaberiIznos2"
+            android:layout_width="wrap_content"
+            android:layout_height="62dp"
+            android:layout_marginTop="184dp"
+            android:fontFamily="sans-serif"
+            android:text="Da li želite da donirate?"
+            android:textColor="@color/colorText"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/dugmeOrg2"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/colorButton"
+        android:text="Org2"
+        android:textColor="@color/colorText"
+        android:textSize="30dp"
+        app:cornerRadius="20dp"
+        app:layout_anchor="@+id/constraintLayout"
+        app:layout_anchorGravity="center"
+        app:strokeColor="@color/colorText"
+        app:strokeWidth="2dp" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
