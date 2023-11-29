@@ -6,6 +6,10 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <color name="colorBase">#FAF1E4</color>
+    <color name="colorButton">#CEDEBD</color>
+    <color name="colorText">#435334</color>
+    <color name="colorPressed">#9EB384</color>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
