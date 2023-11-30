@@ -46,18 +46,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        Button dugmeProba = (Button) findViewById(R.id.dugmeProba);
+        //Button dugmeProba = (Button) findViewById(R.id.dugmeProba);
 
-        dugmeProba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent myIntent = new Intent(MainActivity.this, ProbaActivity.class);
-                //myIntent.putExtra("key", value); //Optional parameters
-                MainActivity.this.startActivity(myIntent);
-            }
-        });
+//        dugmeProba.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent myIntent = new Intent(MainActivity.this, ProbaActivity.class);
+//                //myIntent.putExtra("key", value); //Optional parameters
+//                MainActivity.this.startActivity(myIntent);
+//            }
+//        });
 
-        System.out.println("č");
+        //System.out.println("č");
 
         Spinner spinner;
         OrganizacijaRoomDatabase db = Room.databaseBuilder(getApplicationContext(), OrganizacijaRoomDatabase.class, "organizacija_database").allowMainThreadQueries().build();
