@@ -3,6 +3,7 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
 @Entity(tableName = "tabela_organizacija")
 public class Organizacija {
     @PrimaryKey
@@ -19,6 +20,8 @@ public class Organizacija {
     private double maksimalnaDonacija;
     @ColumnInfo(name = "ukupna_donacija")
     private double ukupnaDonacija;
+    @ColumnInfo(name = "qr_code")
+    private String qrCode;
 
 
 
@@ -41,23 +44,22 @@ public class Organizacija {
     public double getMaksimalnaDonacija() {
         return maksimalnaDonacija;
     }
-
     public double getUkupnaDonacija() {
         return ukupnaDonacija;
+    }
+    public String getQrCode() {
+        return qrCode;
     }
 
     public void setIme(String ime) {
         this.ime = ime;
     }
-
     public void setImeSajta(String imeSajta) {
         this.imeSajta = imeSajta;
     }
-
     public void setPoruka(String poruka) {
         this.poruka = poruka;
     }
-
     public void setLinkDoSlike(int link) { this.linkDoSlike = link; }
     public void setMaksimalnaDonacija(double maksimalnaDonacija) {
         this.maksimalnaDonacija = maksimalnaDonacija;
@@ -65,8 +67,24 @@ public class Organizacija {
     public void setUkupnaDonacija(double ukupnaDonacija) {
         this.ukupnaDonacija = ukupnaDonacija;
     }
+    public void setQrCode(String qrCode) {
+        this.qrCode = qrCode;
+    }
+//kad budete koristile ove 2 funkcije posle toga treba update-ovati bazu ovako:
+//    OrganizacijaRoomDatabase db = Room.databaseBuilder(getApplicationContext(), OrganizacijaRoomDatabase.class, "organizacija_database").allowMainThreadQueries().build();
+//    OrganizacijaDao dao = db.organizacijaDao();
+//    dao.update(organizacija);
+//    ova organizacija gore je ona nad kojom ste pozvale ove 2 funkcije
     public void dodajDonaciju(double iznos) {
         this.ukupnaDonacija+=iznos;
+    }
+    public boolean daLiJeNajvecaDonacija(double iznos) {
+        if (iznos>=getMaksimalnaDonacija()) {
+            setMaksimalnaDonacija(iznos);
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
