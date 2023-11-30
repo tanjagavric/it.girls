@@ -17,27 +17,31 @@ public class MojaAplikacija extends Application {
             OrganizacijaDao dao = db.organizacijaDao();
 
             Organizacija organizacija = new Organizacija("Budi Human");
-            organizacija.setImeSajta("budihuman.rs");
+            organizacija.setImeSajta("http://alas.matf.bg.ac.rs/~mm19003/budihuman.html");
             organizacija.setPoruka("Budi Human!");
             organizacija.setLinkDoSlike(R.drawable.budihuman);
+            organizacija.setQrCode("aHR0cDovL2FsYXMubWF0Zi5iZy5hYy5ycy9+bW0xOTAwMy9idWRpaHVtYW4uaHRtbA==");
             dao.insert(organizacija);
 
             organizacija = new Organizacija("Lice Ulice");
-            organizacija.setImeSajta("liceulice.org");
+            organizacija.setImeSajta("http://alas.matf.bg.ac.rs/~mm19003/liceulice.html");
             organizacija.setPoruka("Podrzi. Doniraj.");
             organizacija.setLinkDoSlike(R.drawable.liceulice);
+            organizacija.setQrCode("aHR0cDovL2FsYXMubWF0Zi5iZy5hYy5ycy9+bW0xOTAwMy9saWNldWxpY2UuaHRtbA==");
             dao.insert(organizacija);
 
             organizacija = new Organizacija("Zvecanska");
-            organizacija.setImeSajta("zvecanska.org.rs");
+            organizacija.setImeSajta("http://alas.matf.bg.ac.rs/~mm19003/zvecanska.html");
             organizacija.setPoruka("Hvala!");
             organizacija.setLinkDoSlike(R.drawable.zvecanska);
+            organizacija.setQrCode("aHR0cDovL2FsYXMubWF0Zi5iZy5hYy5ycy9+bW0xOTAwMy96dmVjYW5za2EuaHRtbA==");
             dao.insert(organizacija);
 
             organizacija = new Organizacija("Felix - azil za mace");
-            organizacija.setImeSajta("felix-catshelter.com");
+            organizacija.setImeSajta("http://alas.matf.bg.ac.rs/~mm19003/felix.html");
             organizacija.setPoruka("mjau!");
             organizacija.setLinkDoSlike(R.drawable.mace);
+            organizacija.setQrCode("aHR0cDovL2FsYXMubWF0Zi5iZy5hYy5ycy9+bW0xOTAwMy9mZWxpeC5odG1s");
             dao.insert(organizacija);
 
             Organizacija o = dao.getOrganizacijaPoImenu("Zvecanska");
