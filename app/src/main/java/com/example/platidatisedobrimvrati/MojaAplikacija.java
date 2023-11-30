@@ -32,20 +32,16 @@ public class MojaAplikacija extends Application {
 
             organizacija = new Organizacija("Zvecanska");
             organizacija.setImeSajta("http://alas.matf.bg.ac.rs/~mm19003/zvecanska.html");
-            organizacija.setPoruka("Hvala!");
+            organizacija.setPoruka("Budimo ljudi i pomozimo deci.");
             organizacija.setLinkDoSlike(R.drawable.zvecanska);
             organizacija.setQrCode("aHR0cDovL2FsYXMubWF0Zi5iZy5hYy5ycy9+bW0xOTAwMy96dmVjYW5za2EuaHRtbA==");
             dao.insert(organizacija);
 
             organizacija = new Organizacija("Felix - azil za mace");
             organizacija.setImeSajta("http://alas.matf.bg.ac.rs/~mm19003/felix.html");
-            organizacija.setPoruka("mjau!");
+            organizacija.setPoruka("\"Nemoguce je\" rekao je ponos. \"Rizicno je\" reklo je iskustvo. \"Besmisleno je\" rekao je razum. \"Pokusaj\" saputalo je srce.");
             organizacija.setLinkDoSlike(R.drawable.mace);
             organizacija.setQrCode("aHR0cDovL2FsYXMubWF0Zi5iZy5hYy5ycy9+bW0xOTAwMy9mZWxpeC5odG1s");
             dao.insert(organizacija);
-
-            Organizacija o = dao.getOrganizacijaPoImenu("Zvecanska");
-            o.setImeSajta("Marija");
-            dao.update(o);
     }
 }
