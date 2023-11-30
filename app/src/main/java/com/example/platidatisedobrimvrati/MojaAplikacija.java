@@ -17,27 +17,27 @@ public class MojaAplikacija extends Application {
             OrganizacijaDao dao = db.organizacijaDao();
 
             Organizacija organizacija = new Organizacija("Budi Human");
-            organizacija.setImeSajta("budihuman.com");
+            organizacija.setImeSajta("budihuman.rs");
             organizacija.setPoruka("Budi Human!");
-            organizacija.setLinkDoSlike("res/drawable/budihuman.png");
+            organizacija.setLinkDoSlike(R.drawable.budihuman);
             dao.insert(organizacija);
 
             organizacija = new Organizacija("Lice Ulice");
-            organizacija.setImeSajta("liceulice.com");
+            organizacija.setImeSajta("liceulice.org");
             organizacija.setPoruka("Podrzi. Doniraj.");
-            organizacija.setLinkDoSlike("res/drawable/liceulice.png");
+            organizacija.setLinkDoSlike(R.drawable.liceulice);
             dao.insert(organizacija);
 
             organizacija = new Organizacija("Zvecanska");
-            organizacija.setImeSajta("zvecanska.com");
+            organizacija.setImeSajta("zvecanska.org.rs");
             organizacija.setPoruka("Hvala!");
-            organizacija.setLinkDoSlike("res/drawable/zvecanska.png");
+            organizacija.setLinkDoSlike(R.drawable.zvecanska);
             dao.insert(organizacija);
 
-            organizacija = new Organizacija("Mace");
-            organizacija.setImeSajta("kuce.com");
+            organizacija = new Organizacija("Felix - azil za mace");
+            organizacija.setImeSajta("felix-catshelter.com");
             organizacija.setPoruka("mjau!");
-            organizacija.setLinkDoSlike("res/drawable/zvecanska.png");
+            organizacija.setLinkDoSlike(R.drawable.mace);
             dao.insert(organizacija);
 
             Organizacija o = dao.getOrganizacijaPoImenu("Zvecanska");

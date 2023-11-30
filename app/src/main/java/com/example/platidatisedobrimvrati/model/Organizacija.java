@@ -14,7 +14,7 @@ public class Organizacija {
     @ColumnInfo(name = "poruka")
     private String poruka;
     @ColumnInfo(name = "link_do_slike")
-    private String linkDoSlike;
+    private int linkDoSlike;
     @ColumnInfo(name = "maksimalna_donacija")
     private double maksimalnaDonacija;
     @ColumnInfo(name = "ukupna_donacija")
@@ -37,7 +37,7 @@ public class Organizacija {
     public String getPoruka() {
         return poruka;
     }
-    public String getLinkDoSlike() { return linkDoSlike; }
+    public int getLinkDoSlike() { return linkDoSlike; }
     public double getMaksimalnaDonacija() {
         return maksimalnaDonacija;
     }
@@ -58,7 +58,7 @@ public class Organizacija {
         this.poruka = poruka;
     }
 
-    public void setLinkDoSlike(String link) { this.linkDoSlike = link; }
+    public void setLinkDoSlike(int link) { this.linkDoSlike = link; }
     public void setMaksimalnaDonacija(double maksimalnaDonacija) {
         this.maksimalnaDonacija = maksimalnaDonacija;
     }

@@ -144,6 +144,7 @@
         android:id="@+id/tvZahvalnica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text="Donirate za organizaciju ..."
         android:textColor="@color/colorBase"
         android:textSize="22dp"
@@ -152,6 +153,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button"
         app:layout_constraintVertical_bias="0.36" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/tekstIzaberiIznos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvZahvalnica"
+        app:srcCompat="@drawable/ic_launcher_background" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
