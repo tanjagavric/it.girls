@@ -41,6 +41,13 @@
                 <action android:name="com.example.platidatisedobrimvratifilter" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name="com.example.platidatisedobrimvrati.MyReceiverEnd"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.platidatisedobrimvratifilter2" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

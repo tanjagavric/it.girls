@@ -13,16 +13,7 @@ import com.example.platidatisedobrimvrati.model.OrganizacijaRoomDatabase;
 public class MyReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-        System.out.println(6);
-
-        String response = intent.getStringExtra("ResponseResult");
-        Intent i = new Intent(context, MainActivity.class);
-        i.putExtra("ResponseResult",response);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        context.startActivity(i);
-
-        System.out.println(response);
+        //System.out.println(6);
 
         Intent intentStampa = new Intent("com.payten.ecr.action");
         intentStampa.setPackage("com.payten.paytenapos");
@@ -52,11 +43,20 @@ public class MyReceiver extends BroadcastReceiver {
                 "\t}\n" +
                 "}";
         intentStampa.putExtra("ecrJson", stringStampa);
-        intentStampa.putExtra("senderIntentFilter", "com.example.platidatisedobrimvrati"); // nikako filter, bice rekurzivno
+        intentStampa.putExtra("senderIntentFilter", "com.example.platidatisedobrimvratifilter2"); // nikako filter, bice rekurzivno
         intentStampa.putExtra("senderPackage", "com.example.platidatisedobrimvrati");
         //intent.putExtra("senderClass", "MainActivity");
         intentStampa.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
 
         context.sendBroadcast(intentStampa);
+
+
+        String response = intent.getStringExtra("ResponseResult");
+        Intent i = new Intent(context, MainActivity.class);
+        i.putExtra("ResponseResult",response);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        context.startActivity(i);
+        //System.out.println(response);
     }
 }
