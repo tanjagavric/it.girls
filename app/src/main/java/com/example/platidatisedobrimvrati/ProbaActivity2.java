@@ -21,6 +21,8 @@ public class ProbaActivity2 extends AppCompatActivity {
         }
 
 
+
+
         EditText editText = (EditText)findViewById(R.id.editText2);
         editText.setText(idOrganizacije, TextView.BufferType.EDITABLE);
     }
