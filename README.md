@@ -22,7 +22,8 @@ After pressing "Pay(Plati)" button they can pay. PoS device will immediately pri
 ![app and receipt](/img/app_and_receipt.png) 
 ![app and website](/img/app_and_website.png) 
 
-###Technical Details
+### Technical Details
+
 The following diagram displays the sequence of events:
 ![transaction description](/img/transaction_description.png) 
 
